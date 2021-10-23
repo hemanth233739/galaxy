@@ -24,9 +24,9 @@
 
 #❤️💐CREDITS💐❤️
 
-[🤴💔LONELYKING💔🤴]  (http://t.me/sarbudeen786)
+[🤴💔LONELYKING💔🤴](http://t.me/sarbudeen786).
 
- [🕊️⃝‌⭕]ᯱꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋ 🇰𝖎𝖙𝖙𝖚🇹𝖙𝖍𝖊 🇲𝖊⭕𝖜]  (http://t.me/Kittu_the_criminal)
+ [🕊️⃝‌⭕]ᯱꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋ 🇰𝖎𝖙𝖙𝖚🇹𝖙𝖍𝖊 🇲𝖊⭕𝖜](http://t.me/Kittu_the_criminal).
 
 
 * 
