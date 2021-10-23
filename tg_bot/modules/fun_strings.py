@@ -414,8 +414,12 @@ TOSS = (
 
 DECIDE = (
     "Yes.",
-    "NoU.",
-    "Maybe."
+    "Noi.",
+    "Maybe.",
+    "No",
+    "Ig No",
+    "Ig Yes",
+    "Ya"
 )
 
 TABLE = (
@@ -423,3 +427,8 @@ TABLE = (
     "I ran out of tables, will order more.",
     "Go do some work instead of flippin tables."
 )
+
+ALIVE = (
+    "★᯾ вℓΛ¢к ℓєgєη∂ ᯾★ㅤ[ㅤ](https://telegra.ph/file/dd9bbdda773a3cfdd34e0.jpg)",
+    "★᯾ вℓΛ¢к ℓєgєη∂ ᯾★ㅤ[ㅤ](https://telegra.ph/file/4a93a092c9f954bc4d070.jpg)",
+    )

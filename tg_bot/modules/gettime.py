@@ -39,13 +39,13 @@ def generate_time(to_find: str, findtype: List[str]) -> str:
                 break
 
     try:
-        result = (f"<b>🌍Country :</b> <code>{country_name}</code>\n"
-                  f"<b>⏳Zone Name :</b> <code>{country_zone}</code>\n"
-                  f"<b>🗺Country Code :</b> <code>{country_code}</code>\n"
-                  f"<b>🌞Daylight saving :</b> <code>{daylight_saving}</code>\n"
-                  f"<b>🌅Day :</b> <code>{current_day}</code>\n"
-                  f"<b>⌚Current Time :</b> <code>{current_time}</code>\n"
-                  f"<b>📆Current Date :</b> <code>{current_date}</code>")
+        result = (f"<b>🌍 Country</b>\nㅤㅤ╚» <code>{country_name}</code>\n"
+                  f"<b>⏳ Zone Name</b>\nㅤㅤ╚» <code>{country_zone}</code>\n"
+                  f"<b>🗺 Country Code</b>\nㅤㅤ╚» <code>{country_code}</code>\n"
+                  f"<b>🌞 Daylight saving</b>\nㅤㅤ╚» <code>{daylight_saving}</code>\n"
+                  f"<b>🌅 Day</b>\nㅤㅤ╚» <code>{current_day}</code>\n"
+                  f"<b>⌚ Current Time</b>\nㅤㅤ╚» <code>{current_time}</code>\n"
+                  f"<b>📆 Current Date</b>\nㅤㅤ╚» <code>{current_date}</code>")
     except:
         result = None
 
@@ -86,6 +86,6 @@ TIME_HANDLER = DisableAbleCommandHandler("time", gettime)
 
 dispatcher.add_handler(TIME_HANDLER)
 
-__mod_name__ = "TIME"
+__mod_name__ = "Time"
 __command_list__ = ["time"]
 __handlers__ = [TIME_HANDLER]

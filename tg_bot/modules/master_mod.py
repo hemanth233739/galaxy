@@ -18,6 +18,7 @@ from tg_bot.modules.helper_funcs.chat_status import user_admin, sudo_plus, bot_a
 from tg_bot.modules.helper_funcs.extraction import extract_user
 from tg_bot.modules.sql.safemode_sql import set_safemode, is_safemoded
 import tg_bot.modules.sql.users_sql as sql
+from tg_bot.modules.sql.afk_sql import is_afk, check_afk_status
 
 
 MARKDOWN_HELP = f"""
@@ -68,7 +69,7 @@ def get_id(bot: Bot, update: Update, args: List[str]):
         else:
 
             user = bot.get_chat(user_id)
-            msg.reply_text(f"{html.escape(user.first_name)}'s id is <code>{user.id}</code>.",
+            msg.reply_text(f"➥ <b>User {html.escape(user.first_name)}'s </b> id is ☞ <code>{user.id}</code>.\nㅤ╚» <b>{mention_html(user.id, 'User Link')}</b>\n\n➥ <b>Current Chat id</b> ☞ <code>{chat.id}</code>",
                            parse_mode=ParseMode.HTML)
 
     else:
@@ -78,7 +79,7 @@ def get_id(bot: Bot, update: Update, args: List[str]):
                            parse_mode=ParseMode.HTML)
 
         else:
-            msg.reply_text(f"This group's id is <code>{chat.id}</code>.",
+            msg.reply_text(f"🆔 <b>CuRrenT GrOuP ID:</b> <code>{chat.id}</code>.",
                            parse_mode=ParseMode.HTML)
 
 
@@ -112,21 +113,22 @@ def info(bot: Bot, update: Update, args: List[str]):
 
     else:
         return
-
-    text = (f"<b>user information:</b>\n"
-            f"🆔️ID: <code>{user.id}</code>\n"
-            f"👤First Name: {html.escape(user.first_name)}")
+ 
+    
+    text = (f"<b>➖➖➖➖➖➖➖➖➖➖\n「 User Info」 ℹ\n➖➖➖➖➖➖➖➖➖➖\n</b>\n"
+            f"🆔️ ID ☞ <code>{user.id}</code>\n\n"
+            f"✔️ <b>First Name</b> ☞ <code>{html.escape(user.first_name)}</code>")
 
     if user.last_name:
-        text += f"\n👤Last Name: {html.escape(user.last_name)}"
+        text += f"\n✔️ <b>Last Name</b> ☞ <code>{html.escape(user.last_name)}</code>"
 
     if user.username:
-        text += f"\n👤Username: @{html.escape(user.username)}"
+        text += f"\n✔️ <b>Username</b> ☞ @{html.escape(user.username)}"
 
-    text += f"\n👤Permanent user link: {mention_html(user.id, 'link')}"
+    text += f"\n✔️ <b>User Link</b> ☞ {mention_html(user.id, 'link')}"
 
     num_chats = sql.get_user_num_chats(user.id)
-    text += f"\n🌍Chat count: <code>{num_chats}</code>"
+    text += f"\n\n✔️ <b>Chat Count</b> ☞ <code>{num_chats}</code>"
 
     try:
         user_member = chat.get_member(user.id)
@@ -135,34 +137,35 @@ def info(bot: Bot, update: Update, args: List[str]):
             result = result.json()["result"]
             if "custom_title" in result.keys():
                 custom_title = result['custom_title']
-                text += f"\nThis user holds the title <b>{custom_title}</b> here."
+                text += f"\n\nThis user holds the title <b>{custom_title}</b> here.\n"
     except BadRequest:
         pass
 
     disaster_level_present = False
 
     if user.id == OWNER_ID:
-        text += "\n😎The Disaster level of this person is 'LEGEND'."
+        text += "\n🔰The Disaster level of this person is 'Hero'."
         disaster_level_present = True
     elif user.id in DEV_USERS:
-        text += "\n🔥This member is one of 'Hero Association'."
+        text += "\n💠This member is one of 'Legend'."
         disaster_level_present = True
     elif user.id in SUDO_USERS:
-        text += "\n🔥The Disaster level of this person is 'Dragon'."
+        text += "\n♓The Disaster level of this person is 'Dragon'."
         disaster_level_present = True
     elif user.id in SUPPORT_USERS:
-        text += "\n🔥The Disaster level of this person is 'HACKER'."
+        text += "\n🌟The Disaster level of this person is 'HACKER'."
         disaster_level_present = True
     elif user.id in TIGER_USERS:
-        text += "\n🔥The Disaster level of this person is 'Tiger'."
+        text += "\n💓The Disaster level of this person is 'Tiger'."
         disaster_level_present = True
     elif user.id in WHITELIST_USERS:
-        text += "\n🔥The Disaster level of this person is 'Wolf'."
+        text += "\n⚡The Disaster level of this person is 'Wolf'."
         disaster_level_present = True
 
     if disaster_level_present:
-        text += ' [<a href="http://t.me/{}?start=disasters">?</a>]'.format(bot.username)
+        text += ' [<a href="http://t.me/{}?start=disasters">CLick Here</a>]'.format(bot.username)
 
+    
     text += "\n"
     for mod in USER_INFO:
         if mod.__mod_name__ == "Users":
@@ -180,6 +183,7 @@ def info(bot: Bot, update: Update, args: List[str]):
 
 @run_async
 @user_admin
+
 def echo(bot: Bot, update: Update):
     args = update.effective_message.text.split(None, 1)
     message = update.effective_message
@@ -196,9 +200,9 @@ def echo(bot: Bot, update: Update):
 def markdown_help(bot: Bot, update: Update):
     update.effective_message.reply_text(MARKDOWN_HELP, parse_mode=ParseMode.HTML)
     update.effective_message.reply_text("Try forwarding the following message to me, and you'll see!")
-    update.effective_message.reply_text("/save test This is a markdown test. _italics_, *bold*, `code`, "
-                                        "[URL](example.com) [button](buttonurl:github.com) "
-                                        "[button2](buttonurl://google.com:same)")
+    update.effective_message.reply_text("/save test MarkDown Help By Black Legend :- \n\nItalic Text :- _Black Legend_\nBold Text :- *Black Legend*\nMono Text :- `Black Legend`,\n"
+                                        "Link Text :- [Black Legend](t.me/black_legend_bot)\n[Support](buttonurl:t.me/black_legend_support)\n"
+                                        "[Repo](buttonurl://github.com/black_legend:same)")
 
 
 @run_async
@@ -442,7 +446,7 @@ __help__ = """
  - /imdb <movie or TV series name>: View IMDb results for selected movie or TV series 
 """
 
-ID_HANDLER = DisableAbleCommandHandler("id", get_id, pass_args=True)
+ID_HANDLER = DisableAbleCommandHandler(("id", "chatid"), get_id, pass_args=True)
 GIFID_HANDLER = DisableAbleCommandHandler("gifid", gifid)
 INFO_HANDLER = DisableAbleCommandHandler("info", info, pass_args=True)
 ECHO_HANDLER = DisableAbleCommandHandler("echo", echo, filters=Filters.group)
@@ -468,6 +472,6 @@ dispatcher.add_handler(GETFW_HANDLER)
 dispatcher.add_handler(CHECKFW_HANDLER)
 
 
-__mod_name__ = "MASTER MOD"
+__mod_name__ = "Info"
 __command_list__ = ["id", "info", "echo"]
 __handlers__ = [ID_HANDLER, GIFID_HANDLER, INFO_HANDLER, ECHO_HANDLER, MD_HELP_HANDLER, STATS_HANDLER, SAFEMODE_HANDLER, MAGISK_HANDLER, TWRP_HANDLER, GETFW_HANDLER, CHECKFW_HANDLER]

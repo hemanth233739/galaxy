@@ -1,26 +1,23 @@
-![Black_legend](https://telegra.ph/file/c6c0e74543b8605ddd650.jpg)
+![ᴊᴀʀᴠɪs ʙᴏᴛ](https://telegra.ph/file/ad2934de00779c4a59db3.jpg)
 
-# What Is Black Legend Bot
+# ᴡʜᴀᴛ ɪs ᴊᴀʀᴠɪs sᴇᴄᴜʀɪᴛʏ ʙᴏᴛ
+ᴊᴀʀᴠɪs ʙᴏᴛ ɪs ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇʀ ʙᴏᴛ ᴡɪᴛʜ ᴍᴀɴʏ ғᴇᴀᴛᴜʀᴇs. ᴛʜɪs ʙᴏᴛ ʜᴇʟᴘs ʏᴏᴜ ᴛᴏ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘs ᴇᴀsɪʟʏ.
 
-Black Legend Bot Is A Telegram Group Management Which is Made By <b>@alain_champion</b>. This Bot Helps You To Manage Your Groups
+* ᴏʀɪɢɪɴᴀʟʟʏ ᴀ sɪᴍᴘʟᴇ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ᴡɪᴛʜ ᴍᴜʟᴛɪᴘʟᴇ ᴀᴅᴍɪɴ ғᴇᴀᴛᴜʀᴇs, ɪᴛ ʜᴀs ᴇᴠᴏʟᴠᴇᴅ ɪɴᴛᴏ ʙᴇᴄᴏᴍɪɴɢ ᴀ ʙᴀsɪs ғᴏʀ ᴍᴏᴅᴜʟᴀʀ ʙᴏᴛs ᴀɪᴍɪɴɢ ᴛᴏ ᴘʀᴏᴠɪᴅᴇ sɪᴍᴘʟᴇ ᴘʟᴜɢɪɴ ᴇxᴘᴀɴsɪᴏɴ ᴠɪᴀ ᴀ sɪᴍᴘʟᴇ ᴅʀᴀɢ ᴀɴᴅ ᴅʀᴏᴘ.
 
-## Deploy To Heroku
+## Dᴇᴘᴏʏ Tᴏ Hᴇʀᴏᴋᴜ
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/infotechbro/black_legend)
+[![Deploy](https://img.shields.io/badge/Deploy%20To-Heroku-blueviolet)](https://dashboard.heroku.com/new?button-url=android-app%3A%2F%2Forg.telegram.messenger%2F&template=https%3A%2F%2Fgithub.com%2Fshrvan42%2FJARVIS_BOT)
 
-## Made By
+## Mᴀᴅᴇ Bʏ
 
-This Bot Was Made By My Pero <b>[Master](https://t.me/alain-champion)</b>
+<a href="https://t.me/tg_x_coders"> <img src="https://img.shields.io/badge/This%20Bot%20Was-Made%20By%20My-orange" /> <img src="https://img.shields.io/badge/Bestest-Master-ff69b4" /> </a>
 
-## Find Me
 
-You can Find Me On <b>[Telegram](https://t.me/black_legend_bot)</b> By Searching <b>[@black_legend_bot](https://t.me/black_legend_bot)</b> On Telegram Search bar
+## Sᴜᴘᴘᴏʀᴛ
 
-## Support 
+<a href="https://t.me/tg_coders_updates"> <img src="https://img.shields.io/badge/Join-Our-green" /> <img src="https://img.shields.io/badge/Support-Group-critical" /> </a>
 
-Join Our <b>[Support Group](https://t.me/blck_legend_support)</b>
+## Sᴏᴜʀᴄᴇ
 
-## Credits
-
-  * <b> @Alain_Champion
-  * @PhantomRedXd </b>
+* <img src="https://img.shields.io/badge/Python-red" />

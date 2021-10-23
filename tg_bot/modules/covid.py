@@ -1,52 +1,52 @@
-from telegram import ParseMode, Update, Bot, Chat
+from telegram import ParseMode, Update, Bot, Chat, MessageEntity
 from telegram.ext import CommandHandler, MessageHandler, BaseFilter, run_async
 
 from tg_bot import dispatcher
 
+
 from requests import get
+from tg_bot.modules.disable import DisableAbleCommandHandler
 
 import json
 from urllib.request import urlopen
 
+SFW_STRINGS = (
+    
+    "🧼 WASH YOUR HANDS FREQUENTLY",
+    "🚴‍ ♂️EXCERCISE AND PROPER SLEEP🛌 WILL BOLSTER THE IMMUNE SYSTEM",
+    "🛀 MAINTAIN GOOD HYGIENE HABHITS AT ALL TIMES",
+    "👬 AVOID CONTACT WITH OTHERS",
+    "😷 WEAR A FACE MASK WHEN DEALING WITH INFECTED PATIENT'S",
+    "🧻 USE TISSUES WHEN COUGHING OR BLOWING NOSE",
+    "🍎 WASH AND PREPARE FOODS CAREFULLY",
+    "STAY HOME STAY SAFE",
+  )
 
 
 
 @run_async
 def covid(bot: Bot, update: Update):
-    message = update.effective_message
-    device = message.text[len('/covid '):]
-    fetch = get(f'https://coronavirus-tracker-api.herokuapp.com/all')
+  update.effective_message.reply_text(
+      "*🦠 COVID-19 Stats 🦠:*\n\n"
+        "➥ *Total Confirmed* \nㅤㅤ╚» `" + str(JHU.Total.confirmed) + "`\n"
+        "➥ *Total Deaths* \nㅤㅤ╚» `" + str(JHU.Total.deaths) + "`\n"
+        "➥ *Total Recovered* \nㅤㅤ╚» `" + str(JHU.Total.recovered) +"`\n"
+        "➥ *Active Cases* \nㅤㅤ╚» `"+ str(JHU.India.cases) + "`\n\n"
+        "➥ *Tips*\n☞ 😷 Wear A Mask.\n ☞ 🧻 Use Tissue When Sneezing Or Blowing Nose.\n☞ 🧼 Wash Your Hands Frequently.\n☞︎︎︎ 👬 Avoid Contact With Others.\n☞︎︎︎ 🍎 Wash Foods Before Eating It.\n☞︎︎︎ 🛀 Maintain Good Hygiene", parse_mode=ParseMode.MARKDOWN)
+  
 
-    if fetch.status_code == 200:
-        usr = fetch.json()
-        data = fetch.text
-        parsed = json.loads(data)
-        total_confirmed_global = parsed["latest"]["confirmed"]
-        total_deaths_global = parsed["latest"]["deaths"]
-        total_recovered_global = parsed["latest"]["recovered"]
-        active_cases_covid19 = total_confirmed_global - total_deaths_global - total_recovered_global
-        reply_text = ("*Corona Stats🦠:*\n"
-        "Total Confirmed: `" + str(total_confirmed_global) + "`\n"
-        "Total Deaths: `" + str(total_deaths_global) + "`\n"
-        "Total Recovered: `" + str(total_recovered_global) +"`\n"
-        "Active Cases: `"+ str(active_cases_covid19) + "`")
-        message.reply_text(reply_text, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
-
-        return
-
-    elif fetch.status_code == 404:
-        reply_text = "The API is currently down."
-    message.reply_text(reply_text, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
-
-
+  
 __help__ = """
  
- - /covid get worldwide corona status
+ ➥ /covid - Get World Wide Corona Status
+ 
 """
 
-__mod_name__ = 'COVID-19'
+__mod_name__ = 'Corona'
 
 COVID_HANDLER = CommandHandler("covid", covid, admin_ok=True)
+
+
 dispatcher.add_handler(COVID_HANDLER)
 
 

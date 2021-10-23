@@ -7,6 +7,7 @@ from coffeehouse.exception import CoffeeHouseError as CFError
 
 from telegram import Message, Chat, User, Update, Bot
 from telegram.ext import CommandHandler, MessageHandler, Filters, run_async
+from telegram.error import BadRequest, Unauthorized, RetryAfter
 
 from tg_bot import dispatcher, AI_API_KEY, OWNER_ID
 import tg_bot.modules.sql.chatbot_sql as sql
@@ -87,14 +88,14 @@ def chatbot(bot: Bot, update: Update):
             bot.send_message(OWNER_ID, f"Chatbot error: {e} occurred in {chat_id}!")
                     
 
-__mod_name__ = "CHAT BOT"
+__mod_name__ = "Chat Bot"
 
 __help__ = """
 
 Powered by CoffeeHouse (https://coffeehouse.intellivoid.net/) from @Intellivoid
 
- - /addchat : Enables Chatbot mode in the chat.
- - /rmchat  : Disables Chatbot mode in the chat.
+ ➥ /addchat : Enables Chatbot mode in the chat.
+ ➥ /rmchat  : Disables Chatbot mode in the chat.
 """
                   
 ADD_CHAT_HANDLER = CommandHandler("addchat", add_chat, filters=CustomFilters.dev_filter)

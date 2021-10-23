@@ -19,7 +19,6 @@ from tg_bot.modules.connection import connected
 from tg_bot.modules.translations.strings import tld
 
 @run_async
-@bot_admin
 @user_admin
 @loggable
 def promote(bot: Bot, update: Update, args: List[str]) -> str:
@@ -35,22 +34,22 @@ def promote(bot: Bot, update: Update, args: List[str]) -> str:
             exit(1)
 
     if not chatD.get_member(bot.id).can_promote_members:
-        update.effective_message.reply_text("I can't promote/demote people here! "
-                                            "Make sure I'm admin and can appoint new admins.")
+        update.effective_message.reply_text("You didnt gaved me write to promote or demote members 🥺! Make sure i am admin and can promote new admin.")
+                                          
         exit(1)
 
     user_id = extract_user(message, args)
     if not user_id:
-        message.reply_text(tld(chat.id, "You don't seem to be referring to a user."))
+        message.reply_text(tld(chat.id, "★ Wow, You didnt seem to referarring to a user. You gonna specify the user? ★."))
         return ""
 
     user_member = chatD.get_member(user_id)
     if user_member.status == 'administrator' or user_member.status == 'creator':
-        message.reply_text(tld(chat.id, "How am I meant to promote someone that's already an admin?"))
+        message.reply_text(tld(chat.id, "How i meant to promote the user who is already an admin ☹︎?"))
         return ""
 
     if user_id == bot.id:
-        message.reply_text(tld(chat.id, "I can't promote myself! Get an admin to do it for me."))
+        message.reply_text(tld(chat.id, "Hey Lol, I cant promote myseld tell an admin to do it for me."))
         return ""
 
     # set same perms as bot - bot can't assign higher perms than itself!
@@ -61,12 +60,12 @@ def promote(bot: Bot, update: Update, args: List[str]) -> str:
                           can_post_messages=bot_member.can_post_messages,
                           can_edit_messages=bot_member.can_edit_messages,
                           can_delete_messages=bot_member.can_delete_messages,
-                          #can_invite_users=bot_member.can_invite_users,
+                          can_invite_users=bot_member.can_invite_users,
                           can_restrict_members=bot_member.can_restrict_members,
                           can_pin_messages=bot_member.can_pin_messages,
                           can_promote_members=bot_member.can_promote_members)
 
-    message.reply_text(tld(chat.id, f"Successfully promoted {mention_html(user_member.user.id, user_member.user.first_name)} in {html.escape(chatD.title)}!"), parse_mode=ParseMode.HTML)
+    message.reply_text(tld(chat.id, f"<b>Black Legend</b> Has Successfully Promoted {mention_html(user_member.user.id, user_member.user.first_name)} In <b>{html.escape(chatD.title)}!</b>"), parse_mode=ParseMode.HTML)
     return f"<b>{html.escape(chatD.title)}:</b>" \
             "\n#PROMOTED" \
            f"\n<b>Admin:</b> {mention_html(user.id, user.first_name)}" \
@@ -74,7 +73,6 @@ def promote(bot: Bot, update: Update, args: List[str]) -> str:
 
 
 @run_async
-@bot_admin
 @user_admin
 @loggable
 def demote(bot: Bot, update: Update, args: List[str]) -> str:
@@ -90,18 +88,17 @@ def demote(bot: Bot, update: Update, args: List[str]) -> str:
             exit(1)
 
     if not chatD.get_member(bot.id).can_promote_members:
-        update.effective_message.reply_text("I can't promote/demote people here! "
-                                            "Make sure I'm admin and can appoint new admins.")
+        update.effective_message.reply_text("You didnt gaved me right to Promote/Demote Members 🥺! Make sure i am admin and can promote new admin")
         exit(1)
 
     user_id = extract_user(message, args)
     if not user_id:
-        message.reply_text(tld(chat.id, "You don't seem to be referring to a user."))
+        message.reply_text(tld(chat.id, "You Gonna Specify The User To Whom You Want To Demote?"))
         return ""
 
     user_member = chatD.get_member(user_id)
     if user_member.status == 'creator':
-        message.reply_text(tld(chat.id, "This person CREATED the chat, how would I demote them?"))
+        message.reply_text(tld(chat.id, "This person **CREATED** the chat, how would I demote them?"))
         return ""
 
     if not user_member.status == 'administrator':
@@ -122,7 +119,7 @@ def demote(bot: Bot, update: Update, args: List[str]) -> str:
                               can_restrict_members=False,
                               can_pin_messages=False,
                               can_promote_members=False)
-        message.reply_text(tld(chat.id, f"Successfully demoted in *{chatD.title}*!"), parse_mode=ParseMode.MARKDOWN)
+        message.reply_text(tld(chat.id, f"*Black Legend* Has Successfully Demoted This Rude Guy In *{chatD.title}*!"), parse_mode=ParseMode.MARKDOWN)
         return f"<b>{html.escape(chatD.title)}:</b>" \
                 "\n#DEMOTED" \
                f"\n<b>Admin:</b> {mention_html(user.id, user.first_name)}" \
@@ -138,7 +135,6 @@ def demote(bot: Bot, update: Update, args: List[str]) -> str:
 
 
 @run_async
-@bot_admin
 @can_pin
 @user_admin
 @loggable
@@ -170,7 +166,6 @@ def pin(bot: Bot, update: Update, args: List[str]) -> str:
 
 
 @run_async
-@bot_admin
 @can_pin
 @user_admin
 @loggable
@@ -193,10 +188,10 @@ def unpin(bot: Bot, update: Update) -> str:
 
 
 @run_async
-@bot_admin
 @user_admin
 def invite(bot: Bot, update: Update):
-    chat = update.effective_chat  # type: Optional[Chat]
+    chat = update.effective_chat
+
     if chat.username:
         update.effective_message.reply_text(chat.username)
     elif chat.type == chat.SUPERGROUP or chat.type == chat.CHANNEL:
@@ -208,11 +203,9 @@ def invite(bot: Bot, update: Update):
             update.effective_message.reply_text("I don't have access to the invite link, try changing my permissions!")
     else:
         update.effective_message.reply_text("I can only give you invite links for supergroups and channels, sorry!")
-
+        
+        
 @run_async
-@connection_status
-@bot_admin
-@can_promote
 @user_admin
 def set_title(bot: Bot, update: Update, args: List[str]):
     chat = update.effective_chat
@@ -225,7 +218,7 @@ def set_title(bot: Bot, update: Update, args: List[str]):
         return
 
     if not user_id:
-        message.reply_text("You don't seem to be referring to a user.")
+        message.reply_text("You don't seem to be referring to a user or the ID specified is incorrect..")
         return
 
     if user_member.status == 'creator':
@@ -254,7 +247,7 @@ def set_title(bot: Bot, update: Update, args: List[str]):
     status = result.json()["ok"]
 
     if status is True:
-        bot.sendMessage(chat.id, f"Sucessfully set title for <code>{user_member.user.first_name or user_id}</code> "
+        bot.sendMessage(chat.id, f"Jarvis Bot has sucessfully set title for <code>{user_member.user.first_name or user_id}</code> "
                                  f"to <code>{title[:16]}</code>!", parse_mode=ParseMode.HTML)
     else:
         description = result.json()["description"]
@@ -262,8 +255,8 @@ def set_title(bot: Bot, update: Update, args: List[str]):
             message.reply_text("I can't set custom title for admins that I didn't promote!")
 
 
+
 @run_async
-@bot_admin
 @user_admin
 def setchatpic(bot: Bot, update: Update):
     chat = update.effective_chat
@@ -301,7 +294,6 @@ def setchatpic(bot: Bot, update: Update):
 
 
 @run_async
-@bot_admin
 @user_admin
 def rmchatpic(bot: Bot, update: Update):
     chat = update.effective_chat
@@ -324,7 +316,7 @@ def rmchatpic(bot: Bot, update: Update):
 def adminlist(bot: Bot, update: Update):
     administrators = update.effective_chat.get_administrators()
     msg = update.effective_message
-    text = "Admins in *{}*:".format(update.effective_chat.title or "this chat")
+    text = "Wooh Lets See Admins In *{}*:\n".format(update.effective_chat.title or "this chat")
     for admin in administrators:
         user = admin.user
         status = admin.status
@@ -332,8 +324,8 @@ def adminlist(bot: Bot, update: Update):
         if user.username:
             name = name = escape_markdown("@" + user.username)
         if status == "creator":
-            text += "\n 🔱 Creator:"
-            text += "\n` • `{} \n\n • *Administrators*:".format(name)
+            text += "\n✪ *CREATOR* ✪"
+            text += "\n`✔︎ `{} \n\n✪ *ADMINISTRATORS* ✪".format(name)
     for admin in administrators:
         user = admin.user
         status = admin.status
@@ -344,8 +336,8 @@ def adminlist(bot: Bot, update: Update):
             name = escape_markdown("@" + user.username)
             
         if status == "administrator":
-            text += "\n`👮🏻 `{}".format(name)
-            members = "\n\n*Members:*\n`🙍‍♂️ ` {} users".format(count)
+            text += "\n`🔰 `{}".format(name)
+            members = "\n\n✪ *TOTAL MEMBERS* ✪\n`♓‍ `There Are *{}* Ghost In This Group".format(count)
             
     msg.reply_text(text + members, parse_mode=ParseMode.MARKDOWN)
 
@@ -357,18 +349,17 @@ def __chat_settings__(chat_id, user_id):
 
 
 __help__ = """
- - /adminlist: list of admins in the chat
+ ➥ /adminlist: list of admins in the chat
 
 *Admin only:*
- - /pin: silently pins the message replied to - add 'loud' or 'notify' to give notifs to users.
- - /unpin: unpins the currently pinned message
- - /invitelink: gets invitelink
- - /promote: promotes the user replied to
- - /demote: demotes the user replied to
- - /settitle: sets a custom title for an admin that the bot promoted.
- - /settitle: Sets a custom title for an admin which is promoted by bot.
- - /setgpic: As a reply to file or photo to set group profile pic!
- - /delgpic: Same as above but to remove group profile pic.
+ ➥ /pin: silently pins the message replied to - add 'loud' or 'notify' to give notifs to users.
+ ➥ /unpin: unpins the currently pinned message
+ ➥ /invitelink: gets invitelink
+ ➥ /promote: promotes the user replied to
+ ➥ /demote: demotes the user replied to
+ ➥ /settitle: Sets a custom title for an admin which is promoted by bot.
+ ➥ /setgpic: As a reply to file or photo to set group profile pic!
+ ➥ /delgpic: Same as above but to remove group profile pic.
 
 """
 
@@ -389,7 +380,7 @@ DEL_CHAT_PIC_HANDLER = CommandHandler("delgpic", rmchatpic, filters=Filters.grou
 
 
 
-ADMINLIST_HANDLER = DisableAbleCommandHandler("adminlist", adminlist, filters=Filters.group)
+ADMINLIST_HANDLER = DisableAbleCommandHandler(("adminlist", "admins"), adminlist, filters=Filters.group)
 
 dispatcher.add_handler(PIN_HANDLER)
 dispatcher.add_handler(UNPIN_HANDLER)
@@ -401,7 +392,7 @@ dispatcher.add_handler(CHAT_PIC_HANDLER)
 dispatcher.add_handler(DEL_CHAT_PIC_HANDLER)
 dispatcher.add_handler(ADMINLIST_HANDLER)
 
-__mod_name__ = "ADMIN"
+__mod_name__ = "Admin"
 
 __command_list__ = ["adminlist", "admins", "invitelink"]
 

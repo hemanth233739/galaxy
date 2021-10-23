@@ -10,7 +10,7 @@ normiefont = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', '
               'v', 'w', 'x', 'y', 'z']
 weebyfont = ['卂', '乃', '匚', '刀', '乇', '下', '厶', '卄', '工', '丁', '长', '乚', '从', '𠘨', '口', '尸', '㔿', '尺', '丂', '丅', '凵',
              'リ', '山', '乂', '丫', '乙']
-
+comicfont = ['ᗩ', 'ᗷ', 'ᑕ', 'ᗪ', 'ᗴ', 'ᖴ', 'ᘜ', 'ᕼ', 'I', 'ᒍ', 'K', 'ᒪ', 'ᗰ', 'ᑎ', 'O', 'ᑭ', 'ᑫ',  'ᖇ', 'Տ', 'T', 'ᑌ', 'ᐯ', 'ᗯ', '᙭', 'Y', 'ᘔ']
 
 @run_async
 def weebify(bot: Bot, update: Update, args: List[str]):
@@ -25,16 +25,19 @@ def weebify(bot: Bot, update: Update, args: List[str]):
         message.reply_to_message.reply_text(string)
     else:
         message.reply_text(string)
+        
+
 
 
 __help__ = """
  - /weebify <text>: returns a weebified text
+
  """
 
 WEEBIFY_HANDLER = DisableAbleCommandHandler("weebify", weebify, pass_args=True)
 
 dispatcher.add_handler(WEEBIFY_HANDLER)
 
-__mod_name__ = "WEEBIFY"
+__mod_name__ = "Font"
 __command_list__ = ["weebify"]
 __handlers__ = [WEEBIFY_HANDLER]

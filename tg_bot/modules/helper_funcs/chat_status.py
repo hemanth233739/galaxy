@@ -77,8 +77,8 @@ def dev_plus(func):
         elif DEL_CMDS and " " not in update.effective_message.text:
             update.effective_message.delete()
         else:
-            update.effective_message.reply_text("What do you think! This is a developer restricted command lol."
-                                                "You do not have permissions to run this.")
+            update.effective_message.reply_text("What do you think! This is a developer restricted command mate."
+                                                "You do not have permissions to run this lol.")
 
     return is_dev_plus_func
 
@@ -96,7 +96,7 @@ def sudo_plus(func):
         elif DEL_CMDS and " " not in update.effective_message.text:
             update.effective_message.delete()
         else:
-            update.effective_message.reply_text("Yo, Lol 😂 Sorry But You cant use this command.")
+            update.effective_message.reply_text("Bro, Sorry But You cant use this command.")
 
     return is_sudo_plus_func
 
@@ -124,7 +124,7 @@ def whitelist_plus(func):
         if user and is_whitelist_plus(chat, user.id):
             return func(bot, update, *args, **kwargs)
         else:
-            update.effective_message.reply_text("Hey pro boy {first} you cant use it.\nVisit @black_legend_support")
+            update.effective_message.reply_text("You cant use it.\nVisit @black_legend_support")
 
     return is_whitelist_plus_func
 
@@ -142,7 +142,7 @@ def user_admin(func):
         elif DEL_CMDS and " " not in update.effective_message.text:
             update.effective_message.delete()
         else:
-            update.effective_message.reply_text("Yo, {first} Sorry But You cant use this command 😞 ")
+            update.effective_message.reply_text("Mate Sorry But You cant use this command 😞 ")
 
     return is_admin
 
@@ -245,9 +245,9 @@ def can_promote(func):
         message_chat_title = update.effective_message.chat.title
 
         if update_chat_title == message_chat_title:
-            cant_promote = f" {first} I can't promote/demote people here!\nMake sure I'm admin and can appoint new admins."
+            cant_promote = f"I can't promote/demote people here!\nMake sure I'm admin and can appoint new admins."
         else:
-            cant_promote = (f"{first} I can't promote/demote people in <b>{update_chat_title}</b>!\n"
+            cant_promote = (f" I can't promote/demote people in <b>{update_chat_title}</b>!\n"
                             f"Make sure I'm admin there and can appoint new admins.")
 
         if chat.get_member(bot.id).can_promote_members:
@@ -289,7 +289,7 @@ def connection_status(func):
             return func(bot, update, *args, **kwargs)
         else:
             if update.effective_message.chat.type == "private":
-                update.effective_message.reply_text("Send /connect in a group that you and I have in common first. Join [this group](t.me/black_legend_support) for any other help")
+                update.effective_message.reply_text("Send /connect in a group that you and I have in common first. Join [this group](t.me/black_legend_support) for any other help", parse_mode=ParseMode.MARKDOWN)
                 return connected_status
 
             return func(bot, update, *args, **kwargs)

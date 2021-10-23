@@ -101,7 +101,7 @@ def get(bot, update, notename, show_none=True, no_format=False):
                     sql.rm_note(chat_id, notename)
                 else:
                     message.reply_text("This note could not be sent, as it is incorrectly formatted. Ask in "
-                                       "@OnePunchSupport if you can't figure out why!")
+                                       "@black_legend_support if you can't figure out why!")
                     LOGGER.exception("Could not parse message #%s in chat %s", notename, str(chat_id))
                     LOGGER.warning("Message was: %s", str(note.value))
         return
@@ -241,7 +241,7 @@ A button can be added to a note by using standard markdown link syntax - the lin
  - /clear <notename>: clear note with this name
 """
 
-__mod_name__ = "NOTES"
+__mod_name__ = "Notes"
 
 GET_HANDLER = CommandHandler("get", cmd_get, pass_args=True)
 HASH_GET_HANDLER = RegexHandler(r"^#[^\s]+", hash_get)

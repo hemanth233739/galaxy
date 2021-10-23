@@ -1,6 +1,6 @@
 import random
 
-from telegram import Bot, Update, MessageEntity
+from telegram import Bot, Update, MessageEntity, ParseMode
 from telegram.ext import Filters, run_async
 
 from tg_bot import dispatcher
@@ -20,8 +20,7 @@ def afk(bot: Bot, update: Update):
         reason = args[1]
 
     sql.set_afk(update.effective_user.id, reason)
-    update.effective_message.reply_text("{} is now away!".format(update.effective_user.first_name))
-
+    update.effective_message.reply_text("*{}* Is Now Away!".format(update.effective_user.first_name), parse_mode=ParseMode.MARKDOWN)
 
 @run_async
 def no_longer_afk(bot: Bot, update: Update):
@@ -40,7 +39,7 @@ def no_longer_afk(bot: Bot, update: Update):
             '{} is back online!',
             '{} is finally here!',
             'Welcome back!, {}',
-            'Where is {}?\nIn the chat!'
+            'Where is {}\nIn the chat!'
         ]
         chosen_option = random.choice(options)
         update.effective_message.reply_text(chosen_option.format(update.effective_user.first_name))
@@ -71,9 +70,9 @@ def reply_afk(bot: Bot, update: Update):
                 valid, reason = sql.check_afk_status(user_id)
                 if valid:
                     if not reason:
-                        res = "{} is AFK!".format(fst_name)
+                        res = "{} is Currently AFK!".format(fst_name)
                     else:
-                        res = "{} is AFK!\nReason:\n{}".format(fst_name, reason)
+                        res = "{} Is Currently AFK!\n\n➥ Reason:\nㅤ ╚» {}".format(fst_name, reason)
                     message.reply_text(res)
 
 
@@ -82,8 +81,8 @@ def __gdpr__(user_id):
 
 
 __help__ = """
- - /afk <reason>: mark yourself as AFK(away from keyboard).
- - brb <reason>: same as the afk command - but not a command.
+ ➥ /afk <reason>: mark yourself as AFK(away from keyboard).
+ ➥ brb <reason>: same as the afk command - but not a command.
 When marked as AFK, any mentions will be replied to with a message to say you're not available!
 """
 
