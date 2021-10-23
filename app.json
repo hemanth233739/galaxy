@@ -61,7 +61,7 @@
          "value": "x_y_z"
       },
       "API_OPENWEATHER": {
-         "description": "ʀᴇǫᴜɪʀᴇᴅ ғᴏʀ ᴡᴇᴀᴛʜᴇʀ ɪɴғᴏʀᴍᴀᴛɪᴏɴ",
+         "description": "ʀᴇǫᴜɪʀᴇᴅ ғᴏʀ ᴡᴇᴀᴛʜᴇʀ ɪɴғᴏʀᴍᴀᴛɪᴏɴ https://api.openweathermap.org/data/2.5/weather ",
          "value": "5c5adc2bc1832de6943e3f4467e84c39"
       },
       "PORT": {
