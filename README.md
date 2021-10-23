@@ -11,12 +11,12 @@
 
 ## Mᴀᴅᴇ Bʏ
 
-<a href="https://t.me/tg_x_coders"> <img src="https://img.shields.io/badge/This%20Bot%20Was-Made%20By%20My-orange" /> <img src="https://img.shields.io/badge/Bestest-Master-ff69b4" /> </a>
+<a href="https://t.me/thanimaibots"> <img src="https://img.shields.io/badge/This%20Bot%20Was-Made%20By%20My-orange" /> <img src="https://img.shields.io/badge/Bestest-Master-ff69b4" /> </a>
 
 
 ## Sᴜᴘᴘᴏʀᴛ
 
-<a href="https://t.me/tg_coders_updates"> <img src="https://img.shields.io/badge/Join-Our-green" /> <img src="https://img.shields.io/badge/Support-Group-critical" /> </a>
+<a href="https://t.me/thanimaisupport"> <img src="https://img.shields.io/badge/Join-Our-green" /> <img src="https://img.shields.io/badge/Support-Group-critical" /> </a>
 
 ## Sᴏᴜʀᴄᴇ
 
