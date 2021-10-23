@@ -26,7 +26,7 @@
 
 💐[🤴💔LONELYKING💔🤴](http://t.me/sarbudeen786)
 
-💐[🕊️⃝‌⭕]ᯱꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋK𝖎𝖙𝖙T𝖚𝖙𝖍𝖊M𝖊⭕𝖜o](http://t.me/Kittu_the_criminal)
+💐[🕊️⃝‌⭕]ᯱꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋꠋK𝖎𝖙𝖙T𝖚𝖙𝖍𝖊M𝖊⭕𝖜o](https://t.me/Kittu_the_criminal)
 
 
 
