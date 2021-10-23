@@ -33,16 +33,16 @@
       },      
       "OWNER_ID": {
          "description": "ʏᴏᴜʀ ᴜsᴇʀ ɪᴅ ᴀs ᴀɴ ɪɴᴛᴇɢᴇʀ.",
-         "value": "1882937735"
+         "value": "1234465167"
       },
       "OWNER_USERNAME": {
-         "description": "ʏᴏᴜʀ ᴜsᴇʀɴᴀᴍᴇ ʟɪᴋᴇ @PeRcY_JaCkSoN_xD",
-         "value": "@shrvan42"
+         "description": "ʏᴏᴜʀ ᴜsᴇʀɴᴀᴍᴇ ʟɪᴋᴇ @im_king-in_my_own_world",
+         "value": "@im_king_in_my_own_world"
       },
       "DEV_USERS": {
          "description": "ɪᴅ ᴏғ ᴜsᴇʀs ᴡʜᴏ ᴀʀᴇ ᴅᴇᴠ (ᴄᴀɴ ᴜsᴇ /ᴘʏ ᴇᴛᴄ.) (ɪғ ʏᴏᴜ ᴅᴏɴᴛ ᴡᴀɴᴛ ᴛʜᴇɴ ᴋᴇᴇᴘ ᴛʜɪs ᴠᴀʟᴜᴇ 1882937735)",
          "required": true,
-         "value": "1742353529"
+         "value": "1234465167"
       },
       "GBAN_LOGS": {
          "description": "ɢʙᴀɴ ʟᴏɢ ᴄʜᴀɴɴᴇʟ, ɪɴᴄʟᴜᴅᴇ ᴛʜᴇ ʜʏᴘʜᴇɴ ᴛᴏᴏ: ᴇx: -123456",
@@ -74,9 +74,9 @@
          "value": "True"
       },
       "SUDO_USERS": {
-         "description": "ᴀ sᴘᴀᴄᴇ sᴇᴘᴀʀᴀᴛᴇᴅ ʟɪsᴛ ᴏғ ᴜsᴇʀ ɪᴅs ᴡʜᴏ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴀssɪɢɴ ᴀs sᴜᴅᴏ ᴜsᴇʀs (ɪғ ʏᴏᴜ ᴅᴏɴᴛ ᴡᴀɴᴛ ᴛʜᴇɴ ᴋᴇᴇᴘ ᴛʜɪs ᴠᴀʟᴜᴇ 1882937735).",
+         "description": "ᴀ sᴘᴀᴄᴇ sᴇᴘᴀʀᴀᴛᴇᴅ ʟɪsᴛ ᴏғ ᴜsᴇʀ ɪᴅs ᴡʜᴏ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴀssɪɢɴ ᴀs sᴜᴅᴏ ᴜsᴇʀs (ɪғ ʏᴏᴜ ᴅᴏɴᴛ ᴡᴀɴᴛ ᴛʜᴇɴ ᴋᴇᴇᴘ ᴛʜɪs ᴠᴀʟᴜᴇ 1234465167).",
          "required": true,
-         "value": "1742353529"
+         "value": "1234465167"
       },
       "TIGER_USERS": {
          "description": "ᴀ sᴘᴀᴄᴇ sᴇᴘᴀʀᴀᴛᴇᴅ ʟɪsᴛ ᴏғ ᴜsᴇʀ ɪᴅs ᴡʜᴏ ʏᴏᴜ ᴡᴀɴɴᴀ ᴀssɪɢɴ ᴀs ᴛɪɢᴇʀ ᴜsᴇʀs (ɪғ ʏᴏᴜ ᴅᴏɴᴛ ᴡᴀɴᴛ ᴛʜᴇɴ ᴋᴇᴇᴘ ᴛʜɪs ᴠᴀʟᴜᴇ 1882937735).",
