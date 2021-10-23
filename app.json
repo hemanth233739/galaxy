@@ -49,11 +49,11 @@
          "value": "-123"
       },
       "CASH_API_KEY": {
-         "description": "ʀᴇǫᴜɪʀᴇᴅ ғᴏʀ ᴄᴜʀʀᴇɴᴄʏ ᴄᴏɴᴠᴇʀᴛᴇʀ",
+         "description": "ʀᴇǫᴜɪʀᴇᴅ ғᴏʀ ᴄᴜʀʀᴇɴᴄʏ ᴄᴏɴᴠᴇʀᴛᴇʀ https://www.alphavantage.co/support/#api-key ",
          "value": "-xyz"
       },
       "TIME_API_KEY": {
-         "description": "ʀᴇǫᴜɪʀᴇᴅ ғᴏʀ ᴛɪᴍᴇᴢᴏɴᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ",
+         "description": "ʀᴇǫᴜɪʀᴇᴅ ғᴏʀ ᴛɪᴍᴇᴢᴏɴᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ https://timezonedb.com/api ",
          "value": "HW6LQCYX43HS"
       },
       "AI_API_KEY": {
