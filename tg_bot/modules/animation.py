@@ -19,18 +19,52 @@ EDIT_TIMES = 10
 
 
 lol_ani = [ 
-          
-            "  *WAAH* ㅤㅤ[ㅤ](https://telegra.ph/file/a19b0bf4760fca85bd961.png) ",
-            "  *LOL* ㅤㅤㅤ[ㅤ](https://telegra.ph/file/ed23819c84bab66e7d92f.png) ",
-            "  *ELECTRIC BILL KON BHAREGA* ㅤ[ㅤ](https://telegra.ph/file/53c85b5b354212496746f.png) ",
-            "  *JHINGA LALA*   [ㅤ](https://telegra.ph/file/1379a8c9ea40eaa463fd8.png) ",
-            "  *NINJA TECHNIQUE* [ㅤ](https://telegra.ph/file/891a05f03399fb48f40f3.png) ",
-            "  *STICKER CHOR* [ㅤ](https://telegra.ph/file/542a1f433c263e4f3f984.png)",
-            "  *SAAR DARD* ㅤ[ㅤ](https://telegra.ph/file/bfa114bbd4b2044cf5933.png)",
-            "  *SWAD AAYA* ㅤ[ㅤ](https://telegra.ph/file/3830d44f9333e3c21b2cd.png)",
-            "  *KAAM TAMMAM* ㅤ[ㅤ](https://telegra.ph/file/ececebb55e5f29be0afcf.png)",
-            "  *JHALEBI KHAYI* ㅤ[ㅤ](https://telegra.ph/file/389a857af3bf833d3ccb2.png)"
-]
+           "Palla odachi kaila kuduthuruven🥱",
+    "Hair ah pudungu🤭",
+    "Po di dog🤣",
+    "Railway station la suthuravan ella inga vandhurukane🤢",
+    "Vaaya moodu da korangu🤫",
+    "Nandri ketta naaye😡",
+    "Manda bathiram",
+    "Ennada ithu mooji🤣 Sethula mukkuna mathiri iruku🤣",
+    "Vayila nalla varuthu🤬 Ean thalaivan @THE_BOSS_OF_TELEGRAM kaga tha amaithiya iruke🥱",
+    "Nenga moodetu irukalam nu computer solluthu sir😑",
+    "Po da 8+1 🤣 8 ah yu 1 ah yu setha 81 pa 🤣",
+    "Yar da avan /abuse /abuse nu pottu uyira vanguran😒",
+    "Dai unaya na kutralathula pathene🤔 ovvoru trees ka thavi thavi pova🤭 unaku inga enna vela 🤣",
+    "Na unaya eppudi thitunalu unayala hair ah kooda pudunga mudiyathu🤣🤣🤣",
+    "Moonja odaichi kaila koduthuruve pathuko🤫",
+    "Enga team no way kitta mothi par da mudinja🤣, unayala hair ah kooda pudunga mudiyathu🤭,only for haters😒",
+    "Ivan evan da mutta paiyan🤢",
+    "yenaya ethavathu un grp la add panni admin podu na soldre😒",
+    "Yar da ivan loosu mathiri olaruran",
+    "My thambi veluma🤣, Apd illa pa 😳 my thambi football player atha coaching ku veluma nu kete 🤣",
+    "Ivan yarrda pombala poruki ah irukan🥱",
+    "Po di anguttu🤬",
+    "Summa summa kadup hair ah eatha koodathu🤬",
+    "Ena sound vidura 🥱 Vaya odachiruve😡",
+    "Enaku /abuse nu command pottavar periya mannar parambora🤢 Ivar yarayachu thitta sonan na thitaluma 🤣🥱",
+    "Dai ne ena avalo periya kinguh ah😡,Iru nalaki unaku sangu tha 🥱",
+    "Ean area la nan than da raaja .👿",
+    "Ippa ean da kadharura🤣",
+    "Ithu 18+ Pa🚫 . ellaru nalla potengala🤣 ,Eppa Eppa nenga high level thinking ku ella pogathenga😳, Na vote ah sone🤣",
+    "Moonjum aalum mandayayum paaru🤣",
+    "Na enna unaku velakarana ne /abuse nu potta na soldrathuku😡",
+    "Po da baadu🥱",
+    "Thambi enna pa unaku ippa prechana🙄",
+    "Enna da landha🥱",
+    "Sanda na sollu sirappa senjiruvom🥱",
+    "Tharai la ooduthu paambu ne apparama poi ****🤭 paaru nu solla vandhen athu kulla antha symbol came 🤣🤣",
+    "Kuttralathula iruka vendiyavangala inga vandhu namma uyira vanguranga",
+    "Po da kundu papa🤣🤭",
+    "Yar da enaya koopitathu🙄",
+    "Po da uncle ooda wife🤣",
+    "I am tired , ipa na yarayu thittura nalamai la illa pa 🥱",
+    "Kanna nondi eduthuruve 👀",
+    "Seruppu keela iruku , innum oru sec la ne mela irupa🤣",
+    "Vanga grandma👵",
+    "Po da panni.... Next rhyming ah na pesuna avan odeeruvan🤣",
+    "Pongada nengalu unga /abuse um😒"]
 
 
 
@@ -41,7 +75,7 @@ def lol(bot: Bot, update: Update):
     for x in range(EDIT_TIMES):
         msg.edit_text(lol_ani[x%10],parse_mode='markdown')
         time.sleep(2)
-    msg.edit_text('*MAJA AAYA KYA 😄*[ㅤ](https://telegra.ph/file/381dd2ea242e0bd292434.png)*AGAR HA THEN ADD ME TO YOUR GROUP*👻',parse_mode='markdown')
+    msg.edit_text('*.........*[ㅤ](https://telegra.ph/file/381dd2ea242e0bd292434.png)*AGAR HA THEN ADD ME TO YOUR GROUP*👻',parse_mode='markdown')
           
           
 
