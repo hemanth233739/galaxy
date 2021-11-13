@@ -1,4 +1,4 @@
-![ɢᴀʟᴀxʏ ʙᴏᴛ](https://telegra.ph/file/420d2e124afe2384f32e1.jpg)
+![ɢᴀʟᴀxʏ ʙᴏᴛ](https://telegra.ph/file/f4875588199b081024abe.jpg)
 
 # 🌌𝙜𝙖𝙡𝙖𝙭𝙮🌌 𝙜𝙧𝙤𝙪𝙥 𝙢𝙖𝙣𝙖𝙜𝙚𝙧 𝙗𝙤𝙩 
 𝗴𝗮𝗹𝗮𝘅𝘆 𝗕𝗼𝘁 𝗶𝘀 𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 𝗚𝗥𝗢𝗨𝗣 𝗠𝗔𝗡𝗔𝗚𝗘𝗥 𝗕𝗢𝗧 𝗪𝗜𝗧𝗛 𝗠𝗔𝗡𝗬 𝗙𝗘𝗔𝗧𝗨𝗥𝗘𝗦. 𝗧𝗛𝗜𝗦 𝗕𝗢𝗧 𝗛𝗘𝗟𝗣𝗦 𝗬𝗢𝗨 𝗧𝗢 𝗠𝗔𝗡𝗔𝗚𝗘 𝗬𝗢𝗨𝗥 𝗚𝗥𝗢𝗨𝗣𝗦 𝗘𝗔𝗦𝗜𝗟𝗬.
@@ -7,7 +7,7 @@
 
 ## Dᴇᴘᴏʏ Tᴏ Hᴇʀᴏᴋᴜ
 
-[![Deploy](https://img.shields.io/badge/Deploy%20To-Heroku-blueviolet)](https://dashboard.heroku.com/new?button-url=android-app%3A%2F%2Forg.telegram.messenger%2F&template=https://github.com/KdIfamily/galaxy)
+[![Deploy](https://img.shields.io/badge/Deploy%20To-Heroku-blueviolet)](https://dashboard.heroku.com/new?button-url=android-app%3A%2F%2Forg.telegram.messenger%2F&template=https://github.com/hemanth233739/galaxy)
 
 ## Mᴀᴅᴇ Bʏ
 
