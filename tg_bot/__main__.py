@@ -78,7 +78,7 @@ USER_SETTINGS = {}
 
 
 SOURCE_STRING = """
-[here](hhttps://github.com/hemanth233739/galaxy)
+[here](hhttps://t.me/hgbotsupdates)
 """
 
 
@@ -171,7 +171,7 @@ def start(bot: Bot, update: Update, args: List[str]):
                             callback_data="help_back".format(bot.username)),
                          InlineKeyboardButton(
                              text="UPDATES 🔀",
-                             url="https://t.me/hgbotsupportchannel")
+                             url="https://t.me/hgbotsupdates")
                      ],
                      [
                          InlineKeyboardButton(
